@@ -1,0 +1,146 @@
+---
+title: 'Redemption (Resgate)'
+description: 'Redeem GSDC back into BRL with a compliant, traceable flow'
+---
+
+<Info>
+  **You will learn**: How to redeem GSDC, mandatory prerequisites, fees, and how to avoid common mistakes.
+</Info>
+
+# GSDC Redemption Guide
+
+This guide explains how to redeem your GSDC stablecoins for fiat currency (BRL).
+
+## 1. What is redeeming?
+
+**Redeeming** is the inverse of minting: you exchange GSDC tokens for their equivalent value in fiat (BRL). When you redeem:
+
+- Your GSDC is removed from circulation on-chain  
+- The equivalent BRL amount is transferred from our reserves to your verified bank account  
+
+### How it works: wallet & bank flow
+
+<Steps>
+  <Step title="Create redemption order">
+    Request to sell your GSDC directly on the platform from the GSDC Trading section.
+  </Step>
+  <Step title="Send GSDC from your wallet">
+    Transfer GSDC from your whitelisted wallet to the company wallet address provided after compliance approval.
+  </Step>
+  <Step title="Fiat settlement">
+    Once the transfer is verified on-chain, our treasury initiates a BRL transfer to your verified bank account.
+  </Step>
+</Steps>
+
+<Warning>
+  **Whitelisted wallet only**
+
+  The system only recognizes redemptions sent from your registered wallet address. Sending GSDC from an unverified wallet can prevent the system from linking the transfer to your account and delay or block payout.
+</Warning>
+
+## 2. Requirements
+
+Before your first redemption request, you must:
+
+- Have a **KYC-approved** account  
+- Have a **verified, whitelisted wallet** that will send GSDC  
+- Have a **verified bank account** to receive BRL  
+
+### Why requirements matter
+
+- Enforce AML and sanctions compliance  
+- Ensure funds only move between verified, identity-linked endpoints  
+- Guarantee that redemptions trace back to a single, vetted person or entity  
+
+## 3. Step-by-step redemption flow
+
+### 3.1 Create your redemption order
+
+- **Access**: Log in to your KYC-approved account.  
+- **Start redemption**: On the main dashboard, go to **GSDC Trading → Redeem GSDC → Start Redemption**.  
+- **Generate quote**: Enter the GSDC amount you want to redeem, choose your **Redemption Currency** (e.g. BRL), and select **Generate Quote**.  
+- **Review quote**: Confirm the indicative GSDC price, exchange rate, BRL amount, and fees shown in the **Quote Summary**.  
+- **Select bank account**: Choose your verified bank account and select **Accept Quote & Continue to Deposit**.  
+
+<Note>
+  Only previously verified bank accounts will be available for selection.
+</Note>
+
+Compliance then reviews your order. Once approved, you receive an email containing the **Company Wallet Address** where you must send your GSDC.
+
+### 3.2 Transfer GSDC and submit proof
+
+- **Transfer GSDC**: From your whitelisted wallet, send the exact GSDC amount shown in the redemption order to the provided company wallet address.  
+  - Copy-paste the address directly from the platform  
+  - Ensure you have enough **ETH** to pay gas fees  
+- **Upload transfer proof**:  
+  - In the platform, select **Upload Transfer Proof**  
+  - Choose the sending wallet  
+  - Paste your **Transaction URL (Hash)** from Etherscan  
+
+<Info>
+  The Transaction URL must follow this format:  
+  `https://etherscan.io/tx/<transactionhash>`
+</Info>
+
+You may optionally upload a document (e.g. screenshot) as additional proof.
+
+### 3.3 Rate locking, payout, and tracking
+
+After the GSDC is received in the company wallet and the transaction is confirmed:
+
+- The FX rate is locked  
+- The BRL payout amount is calculated  
+- A bank transfer is initiated to your verified bank account  
+
+You can monitor the end-to-end process via:
+
+- **Quick Actions → Transactions → Redemption Order**  
+
+Once the BRL arrives, select **Confirm Receipt** to close your order.
+
+## 4. Fees
+
+### Redemption fee
+
+- **Fee**: 0.15%  
+- **Basis**: Applied on the GSDC amount sent, multiplied by the locked exchange rate  
+- **Impact**: Deducted from the final BRL payout  
+
+<CardGroup cols={2}>
+  <Card title="Example" icon="calculator">
+    If you redeem 10,000 GSDC and the locked rate is 1 GSDC = 1 BRL, the 0.15% fee means you receive 9,985 BRL.
+  </Card>
+</CardGroup>
+
+## 5. Timing and expiry
+
+After your redemption order is approved, a strict time limit applies to submit your transaction URL (Hash).
+
+<Warning>
+  If the deadline passes before you send tokens and upload the hash, the order expires. Do not send tokens for an expired order; instead, create a new one.
+</Warning>
+
+<Tip>
+  Keep an eye on your inbox for the approval email with the company wallet address and act quickly to avoid order expiry.
+</Tip>
+
+## 6. Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Insufficient ETH for gas">
+    If your wallet warns about insufficient funds, top up ETH to cover gas fees before retrying the transfer.
+  </Accordion>
+
+  <Accordion title="Transaction hash error">
+    Make sure you paste the full Etherscan URL (e.g. `https://etherscan.io/tx/...`), not just the hash string.
+  </Accordion>
+
+  <Accordion title="Wallet not appearing in the platform">
+    Confirm that the wallet was correctly added and verified during onboarding. If not, complete the whitelisting process first.
+  </Accordion>
+
+  <Accordion title="Expired redemption order">
+    If the timer expires, do not send tokens to the company wallet. Create a fresh redemption order so pricing and rates are valid.
+  </Accordion>
+</AccordionGroup>
