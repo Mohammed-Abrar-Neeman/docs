@@ -73,9 +73,7 @@
   "contextual": {
     "options": [
       "copy",
-      "view",
-      "cursor",
-      "vscode"
+      "view"
     ]
   },
   "footer": {
